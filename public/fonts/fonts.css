@@ -13,12 +13,50 @@
 */
 
 /*
-// XXXXX
+// Roboto
 // ============================================================
 */
 
+/* Light */
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/roboto/roboto-light.eot');
+    src: url('../fonts/roboto/roboto-light.eot') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-light.woff') format('woff'),
+         url('../fonts/roboto/roboto-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 /* Regular */
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/roboto/roboto-regular.eot');
+    src: url('../fonts/roboto/roboto-regular.eot') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-regular.woff') format('woff'),
+         url('../fonts/roboto/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 /* Medium */
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/roboto/roboto-medium.eot');
+    src: url('../fonts/roboto/roboto-medium.eot') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-medium.woff') format('woff'),
+         url('../fonts/roboto/roboto-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 /* Bold */
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/roboto/roboto-bold.eot');
+    src: url('../fonts/roboto/roboto-bold.eot') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-bold.woff') format('woff'),
+         url('../fonts/roboto/roboto-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -18,12 +18,13 @@ export const CardWrapper = styled.div`
   /* Parent styles
   ------------------------------- */
   text-align: center;
-  border: 1px solid #000000;
   border-radius: 10px;
   margin: 30px;
+  box-shadow: 0 20px 5px #DDDDDD, 0 30px 5px #EEEEEE;
 
   /* Child element styles
   ------------------------------- */
+
   .card-header {
     position: relative;
   }
@@ -34,7 +35,7 @@ export const CardWrapper = styled.div`
     left: 15px;
     display: flex;
     justify-content: space-between;
-    color: #FFFFFF;
+    font-family: 'Roboto-Light';
     
     .card-profile-img {
       margin-right: -5px;
@@ -44,7 +45,7 @@ export const CardWrapper = styled.div`
     .card-proflie-number {
       margin-left: 10px;
       font-size: 18px;
-      line-height: 24px;
+      line-height: 32px;
     }
   }
 
@@ -52,7 +53,6 @@ export const CardWrapper = styled.div`
     position: absolute;
     top: 15px;
     right: 20px;
-    color: #FFFFFF;
     font-size: 24px;
   }
 
@@ -60,8 +60,8 @@ export const CardWrapper = styled.div`
     position: absolute;
     bottom: 15px;
     left: 15px;
-    color: #FFFFFF;
-    font-size: 28px;
+    font-family: 'Roboto-Bold';
+    font-size: 24px;
   }
 
   .card-image {
@@ -75,12 +75,16 @@ export const CardWrapper = styled.div`
     
     .card-steps {
       color: #005BF4;
+      font-family: 'Roboto-Medium';
       font-size: 12px;
+      letter-spacing: 1px;
       text-align: left;
     }
     .card-detail {
       color: #3A3D44;
-      font-size: 16px;
+      font-family: 'Roboto-Regular';
+      font-size: 14px;
+      letter-spacing: 1px;
       text-align: left;
       margin-top: 10px;
     }
@@ -104,7 +108,9 @@ export const CardWrapper = styled.div`
     justify-content: space-between;
     flex-wrap: nowrap;
     color: #9E9FA3;
-    font-size: 16px;
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+    letter-spacing: 1px;
     margin-top: 25px;
     margin-bottom: 10px;
   }
@@ -115,8 +121,15 @@ export const CardWrapper = styled.div`
   &.is-ui-bg-white {
     background-color: #FFFFFF;
   }
+
+  .card-header {
+    &.is-ui-font-white {
+      color: #FFFFFF;
+    }
+  }
+
   /* UI for */
-  /* Color */
+
   /* Media queries
   ------------------------------- */
 `
