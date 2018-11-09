@@ -19,8 +19,10 @@ export const CardWrapper = styled.div`
   ------------------------------- */
   text-align: center;
   border-radius: 10px;
-  margin: 30px;
-  box-shadow: 0 20px 5px #DDDDDD, 0 30px 5px #EEEEEE;
+  margin: 32px;
+  position: relative;
+  z-index: 3;
+  /*box-shadow: 0 20px 5px #DDDDDD, 0 30px 5px #EEEEEE;*/
 
   /* Child element styles
   ------------------------------- */
@@ -38,14 +40,25 @@ export const CardWrapper = styled.div`
     font-family: 'Roboto-Light';
     
     .card-profile-img {
-      margin-right: -5px;
-      font-size: 24px;
+      margin-right: -8px;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      width: 26px;
+      height: 26px;
+    }
+
+    .card-profile-img-1 {
+      z-index: 3;
+    }
+
+    .card-profile-img-2 {
+      z-index: 2;
     }
 
     .card-proflie-number {
-      margin-left: 10px;
+      margin-left: 15px;
       font-size: 18px;
-      line-height: 32px;
+      line-height: 26px;
     }
   }
 
@@ -61,12 +74,23 @@ export const CardWrapper = styled.div`
     bottom: 15px;
     left: 15px;
     font-family: 'Roboto-Bold';
-    font-size: 24px;
+    font-size: 26px;
   }
 
-  .card-image {
-    border-radius: 10px 10px 0 0;
-    width: 100%;
+  .cover-ratio-8-7 {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 88.11%;
+
+    .card-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .card-description {
@@ -96,11 +120,17 @@ export const CardWrapper = styled.div`
     right: 15px;
     border-radius: 50%;
     background-color: #0A82FA;
+    background-image: linear-gradient(#0997F9, #054DF9);
     color: #FFFFFF;
     font-size: 24px;
-    line-height: 60px;
-    width: 60px;
-    height: 60px;
+    line-height: 58px;
+    width: 58px;
+    height: 58px;
+
+    .card-direction-img {
+      position: relative;
+      top: -3px;
+    }
   }
 
   .card-timer {
@@ -111,7 +141,7 @@ export const CardWrapper = styled.div`
     font-family: 'Roboto-Regular';
     font-size: 14px;
     letter-spacing: 1px;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 10px;
   }
 

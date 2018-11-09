@@ -11,12 +11,21 @@ import {
  */
 
 class CardHeader extends React.PureComponent {
+  static defaultProps = {
+    srcImg: require('./images/amsterdam.jpg'),
+    srcProfile: require('./images/profile-1.jpg'),
+    srcWishlist: require('./images/favorite_border_white.png')
+  }
+  
   render () {
     const {
       className,
       children,
       ui,
-      uiFor
+      uiFor,
+      srcImg,
+      srcProfile,
+      srcWishlist
     } = this.props
 
     // props for css classes
@@ -31,19 +40,31 @@ class CardHeader extends React.PureComponent {
 
     return (
       <div className={classes}>
-        <img className='card-image' src='https://media.cntraveler.com/photos/5acce5d2070ad55df829cf6e/4:3/w_480,c_limit/GettyImages-597062183.jpg' alt='Route Pic' />
-          <div className='card-profile'>
-            <div className='card-profile-img'><i className='fas fa-user-circle'></i></div>
-            <div className='card-profile-img'><i className='fas fa-user-circle'></i></div>
-            <div className='card-profile-img'><i className='fas fa-user-circle'></i></div>
-            <div className='card-proflie-number'>+157</div>
-          </div>
-          <div className='card-wishlist'>
-            <i className='far fa-heart'></i>
-          </div>
-          <div className='card-title'>
-            <h2>Amsterdam</h2>
-          </div>
+        <div className='cover-ratio-8-7'>
+          <img className='card-image' alt='Amsterdam'
+            src={srcImg}
+          />
+        </div>
+        <div className='card-profile'>
+            <img className='card-profile-img card-profile-img-1' alt='Profile'
+              src={srcProfile}
+            />
+            <img className='card-profile-img card-profile-img-2' alt='Profile'
+              src={srcProfile}
+            />
+            <img className='card-profile-img' alt='Profile'
+              src={srcProfile}
+            />
+          <div className='card-proflie-number'>+157</div>
+        </div>
+        <div className='card-wishlist'>
+          <img className='card-' alt='Profile'
+            src={srcWishlist}
+          />
+        </div>
+        <div className='card-title'>
+          <h2>Amsterdam</h2>
+        </div>
         {children}
       </div>
     )
@@ -51,12 +72,17 @@ class CardHeader extends React.PureComponent {
 }
 
 class CardDescription extends React.PureComponent {
+  static defaultProps = {
+    srcDirection: require('./images/near_me_white.png')
+  }
+
   render () {
     const {
       className,
       children,
       ui,
-      uiFor
+      uiFor,
+      srcDirection
     } = this.props
 
     // props for css classes
@@ -75,7 +101,9 @@ class CardDescription extends React.PureComponent {
           <p>12 steps card</p>
         </div>
         <div className='card-direction'>
-          <i className='fas fa-external-link-alt'></i>
+          <img className='card-direction-img' alt='Profile'
+            src={srcDirection}
+          />
         </div>
         <div className='card-detail'>
           <p>Architecture, Red Lights, Herring and much more inside</p>
