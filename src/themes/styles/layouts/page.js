@@ -45,10 +45,14 @@ injectGlobal`
   .detail {
     background-color: #0F224C;
     
+    .detail-box {
+      position: relative;
+    }
+    
     .card-shadow-1 {
       position: absolute;
       left: 47px;
-      bottom: -12px;
+      bottom: -15px;
       z-index: 2;
       background-color: #435B7F;
       width: 281px;

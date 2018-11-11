@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-// import {
-//   default as VARIABLES
-// } from '../../themes/styles/bases/variables'
-// import {
-//   default as TYPOGRAPHYS
-// } from '../../themes/styles/bases/typographys'
+import {
+  default as VARIABLES
+} from '../../themes/styles/bases/variables'
+import {
+  default as TYPOGRAPHYS
+} from '../../themes/styles/bases/typographys'
 // import {
 //   default as MIXINS
 // } from '../../themes/styles/helpers/mixins'
@@ -37,12 +37,11 @@ export const CardWrapper = styled.div`
     left: 15px;
     display: flex;
     justify-content: space-between;
-    font-family: 'Roboto-Light';
     
     .card-profile-img {
       margin-right: -8px;
       border-radius: 50%;
-      border: 2px solid #FFFFFF;
+      border: 2px solid ${VARIABLES.COLORS.WHITE};
       width: 26px;
       height: 26px;
     }
@@ -57,8 +56,8 @@ export const CardWrapper = styled.div`
 
     .card-proflie-number {
       margin-left: 15px;
-      font-size: 18px;
       line-height: 26px;
+      ${TYPOGRAPHYS.FONT_STYLES.FIRST_LIGHT_XS};
     }
   }
 
@@ -66,15 +65,13 @@ export const CardWrapper = styled.div`
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 24px;
   }
 
   .card-title {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    font-family: 'Roboto-Bold';
-    font-size: 26px;
+    ${TYPOGRAPHYS.FONT_STYLES.FIRST_BOLD_MD};
   }
 
   .cover-ratio-8-7 {
@@ -98,16 +95,14 @@ export const CardWrapper = styled.div`
     padding: 15px;
     
     .card-steps {
-      color: #005BF4;
-      font-family: 'Roboto-Medium';
-      font-size: 12px;
+      color: ${VARIABLES.COLORS.BLUE_3};
+      ${TYPOGRAPHYS.FONT_STYLES.FIRST_MEDIUM_MN};
       letter-spacing: 1px;
       text-align: left;
     }
     .card-detail {
-      color: #3A3D44;
-      font-family: 'Roboto-Regular';
-      font-size: 14px;
+      color: ${VARIABLES.COLORS.TEXT_DETAIL};
+      ${TYPOGRAPHYS.FONT_STYLES.FIRST_REGULAR_TN};
       letter-spacing: 1px;
       text-align: left;
       margin-top: 10px;
@@ -119,10 +114,8 @@ export const CardWrapper = styled.div`
     top: -30px;
     right: 15px;
     border-radius: 50%;
-    background-color: #0A82FA;
+    background-color: ${VARIABLES.COLORS.BLUE_2};
     background-image: linear-gradient(#0997F9, #054DF9);
-    color: #FFFFFF;
-    font-size: 24px;
     line-height: 58px;
     width: 58px;
     height: 58px;
@@ -137,9 +130,8 @@ export const CardWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    color: #9E9FA3;
-    font-family: 'Roboto-Regular';
-    font-size: 14px;
+    color: ${VARIABLES.COLORS.GRAY_5};
+    ${TYPOGRAPHYS.FONT_STYLES.FIRST_REGULAR_TN};
     letter-spacing: 1px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -148,14 +140,9 @@ export const CardWrapper = styled.div`
   /* Modifiers
   ------------------------------- */
   /* UI */
-  &.is-ui-bg-white {
-    background-color: #FFFFFF;
-  }
-
-  .card-header {
-    &.is-ui-font-white {
-      color: #FFFFFF;
-    }
+  &.is-ui-theme-white {
+    background-color: ${VARIABLES.COLORS.WHITE};
+    color: ${VARIABLES.COLORS.WHITE};
   }
 
   /* UI for */

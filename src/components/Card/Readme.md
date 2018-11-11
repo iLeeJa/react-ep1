@@ -4,14 +4,8 @@ Default:
 <Card>Default</Card>
 ```
 
-Background:
+WHITE THEME:
 
 ```jsx
-<Card ui='bg-white'>White Background</Card>
-```
-
-Header:
-
-```jsx
-<Card.Header ui='font-white'>Default</Card.Header>
+<Card ui='theme-white'>Default</Card>
 ```

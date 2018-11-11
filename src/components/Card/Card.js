@@ -139,8 +139,7 @@ export class Card extends React.PureComponent {
     * [Card] - modifier name for change default multiple UI (parent and children), can reuse
     */
     ui: PropTypes.oneOf([
-      'bg-white',
-      'font-white'
+      'theme-white'
     ]),
 
     /**

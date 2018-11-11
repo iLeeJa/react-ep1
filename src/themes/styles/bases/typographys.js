@@ -30,10 +30,52 @@ const TEXT_DEFAULT = css`
 
 export default {
   FONT_STYLES: {
+    // First Light
+    // ============================================================
+
+    // Extra small
+    // -------------------------------
+    FIRST_LIGHT_XS: css`
+      ${TEXT_DEFAULT}
+      font-family: ${VARIABLES.FONT_FAMILIES.FIRST_LIGHT};
+      font-size: ${VARIABLES.FONT_SIZES.XS};
+    `,
+
     // First regular
     // ============================================================
 
     // Mini
     // -------------------------------
+
+    // Tiny
+    // -------------------------------
+    FIRST_REGULAR_TN: css`
+      ${TEXT_DEFAULT}
+      font-family: ${VARIABLES.FONT_FAMILIES.FIRST_REGULAR};
+      font-size: ${VARIABLES.FONT_SIZES.TN};
+    `,
+
+    // First medium
+    // ============================================================
+
+    // Mini
+    // -------------------------------
+    FIRST_MEDIUM_MN: css`
+      ${TEXT_DEFAULT}
+      font-family: ${VARIABLES.FONT_FAMILIES.FIRST_MEDIUM};
+      font-size: ${VARIABLES.FONT_SIZES.MN};
+    `,
+
+    // First bold
+    // ============================================================
+    
+    // Medium
+    // -------------------------------
+    FIRST_BOLD_MD: css`
+      ${TEXT_DEFAULT}
+      font-family: ${VARIABLES.FONT_FAMILIES.FIRST_BOLD};
+      font-size: ${VARIABLES.FONT_SIZES.MD};
+    `,
+
   }
 }

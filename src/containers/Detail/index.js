@@ -13,14 +13,16 @@ export class DetailContainer extends React.Component {
       <React.Fragment>
         <div class='detail'>
           <h1>Detail</h1>
+          <div class='detail-box'>
           <div class='card-shadow-1'></div>
           <div class='card-shadow-2'></div>
-          <Card ui='bg-white'>
-            <Card.Header ui='font-white'>
+          <Card ui='theme-white'>
+            <Card.Header>
             </Card.Header>
             <Card.Description>
             </Card.Description>
           </Card>
+          </div>
           <button
             onClick={() => {
               redirect(ROUTE_PATH.HOME.LINK)
