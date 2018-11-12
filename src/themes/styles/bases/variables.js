@@ -47,8 +47,11 @@ export default {
 
     // Blue
     BLUE_1: '#6495ED',
-    BLUE_2: '#0A82FA',
-    BLUE_3: '#005BF4',
+    BLUE_2: '#435B7F',
+    BLUE_3: '#0A82FA',
+    BLUE_4: '#0997F9',
+    BLUE_5: '#054DF9',
+    BLUE_6: '#005BF4',
 
     // Gray
     GRAY_1: '#F7F7F7',

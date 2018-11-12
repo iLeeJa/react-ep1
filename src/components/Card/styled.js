@@ -19,14 +19,13 @@ export const CardWrapper = styled.div`
   ------------------------------- */
   text-align: center;
   border-radius: 10px;
-  margin: 32px;
+  margin: 32px auto;
+  width: 311px;
   position: relative;
-  z-index: 3;
-  /*box-shadow: 0 20px 5px #DDDDDD, 0 30px 5px #EEEEEE;*/
 
   /* Child element styles
   ------------------------------- */
-
+  
   .card-header {
     position: relative;
   }
@@ -93,9 +92,12 @@ export const CardWrapper = styled.div`
   .card-description {
     position: relative;
     padding: 15px;
+    z-index: 3;
+    background-color: ${VARIABLES.COLORS.WHITE};
+    border-radius: 0 0 10px 10px;
     
     .card-steps {
-      color: ${VARIABLES.COLORS.BLUE_3};
+      color: ${VARIABLES.COLORS.BLUE_6};
       ${TYPOGRAPHYS.FONT_STYLES.FIRST_MEDIUM_MN};
       letter-spacing: 1px;
       text-align: left;
@@ -114,15 +116,14 @@ export const CardWrapper = styled.div`
     top: -30px;
     right: 15px;
     border-radius: 50%;
-    background-color: ${VARIABLES.COLORS.BLUE_2};
-    background-image: linear-gradient(#0997F9, #054DF9);
+    background-color: ${VARIABLES.COLORS.BLUE_3};
+    background-image: linear-gradient(${VARIABLES.COLORS.BLUE_4}, ${VARIABLES.COLORS.BLUE_5});
     line-height: 58px;
     width: 58px;
     height: 58px;
 
     .card-direction-img {
       position: relative;
-      top: -3px;
     }
   }
 
@@ -135,6 +136,34 @@ export const CardWrapper = styled.div`
     letter-spacing: 1px;
     margin-top: 20px;
     margin-bottom: 10px;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: -15px;
+    z-index: 2;
+    background-color: ${VARIABLES.COLORS.BLUE_2};
+    height: 143px;
+    border-radius: 10px;
+    filter: blur(1px);
+    opacity: 0.8;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    left: 30px;
+    right: 30px;
+    bottom: -30px;
+    background-color: ${VARIABLES.COLORS.GRAY_2};
+    height: 143px;
+    border-radius: 10px;
+    filter: blur(1px);
+    opacity: 0.1;
   }
 
   /* Modifiers

@@ -44,35 +44,5 @@ injectGlobal`
 
   .detail {
     background-color: #0F224C;
-    
-    .detail-box {
-      position: relative;
-    }
-    
-    .card-shadow-1 {
-      position: absolute;
-      left: 47px;
-      bottom: -15px;
-      z-index: 2;
-      background-color: #435B7F;
-      width: 281px;
-      height: 200px;
-      border-radius: 10px;
-      filter: blur(1px);
-      opacity: 0.8;
-    }
-
-    .card-shadow-2 {
-      position: absolute;
-      z-index: 1;
-      left: 57px;
-      bottom: -30px;
-      background-color: #ccc;
-      width: 261px;
-      height: 200px;
-      border-radius: 10px;
-      filter: blur(1px);
-      opacity: 0.1;
-    }
   }
 `;

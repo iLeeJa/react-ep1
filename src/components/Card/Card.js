@@ -25,7 +25,8 @@ class CardHeader extends React.PureComponent {
       uiFor,
       srcImg,
       srcProfile,
-      srcWishlist
+      srcWishlist,
+      cardTitle
     } = this.props
 
     // props for css classes
@@ -63,7 +64,7 @@ class CardHeader extends React.PureComponent {
           />
         </div>
         <div className='card-title'>
-          <h2>Amsterdam</h2>
+          <h2>{cardTitle}</h2>
         </div>
         {children}
       </div>
@@ -82,7 +83,9 @@ class CardDescription extends React.PureComponent {
       children,
       ui,
       uiFor,
-      srcDirection
+      srcDirection,
+      cardSteps,
+      cardDetail
     } = this.props
 
     // props for css classes
@@ -98,7 +101,7 @@ class CardDescription extends React.PureComponent {
     return (
       <div className={classes}>
         <div className='card-steps'>
-          <p>12 steps card</p>
+          <p>{cardSteps}</p>
         </div>
         <div className='card-direction'>
           <img className='card-direction-img' alt='Profile'
@@ -106,7 +109,7 @@ class CardDescription extends React.PureComponent {
           />
         </div>
         <div className='card-detail'>
-          <p>Architecture, Red Lights, Herring and much more inside</p>
+          <p>{cardDetail}</p>
         </div>
         <div class='card-timer'>
           <div>2h 45min</div>
