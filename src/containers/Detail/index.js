@@ -14,10 +14,12 @@ export class DetailContainer extends React.Component {
         <div class='detail'>
           <h1>Detail</h1>
           <Card ui='theme-white'>
-            <Card.Header cardTitle='Amsterdam'>
+            <Card.Header cardTitle='Amsterdam' allUserNumber>
+              <Card.Avatar />
+              <Card.Avatar />
+              <Card.Avatar />
             </Card.Header>
-            <Card.Description cardSteps='12 steps card' cardDetail='Architecture, Red Lights, Herring and much more inside'>
-            </Card.Description>
+            <Card.Description cardSteps='12 steps card' cardDetail='Architecture, Red Lights, Herring and much more inside' cardTime='2h 45min' cardDistance='19km' cardFrom='from Dam Square' />
           </Card>
           <button
             onClick={() => {

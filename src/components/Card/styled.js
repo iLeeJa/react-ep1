@@ -25,7 +25,6 @@ export const CardWrapper = styled.div`
 
   /* Child element styles
   ------------------------------- */
-  
   .card-header {
     position: relative;
   }
@@ -36,24 +35,27 @@ export const CardWrapper = styled.div`
     left: 15px;
     display: flex;
     justify-content: space-between;
-    
-    .card-profile-img {
+
+    .card-avatar {
       margin-right: -8px;
+    }
+    
+    .card-avatar-img {
       border-radius: 50%;
       border: 2px solid ${VARIABLES.COLORS.WHITE};
       width: 26px;
       height: 26px;
     }
 
-    .card-profile-img-1 {
+    .card-avatar-img-1 {
       z-index: 3;
     }
 
-    .card-profile-img-2 {
+    .card-avatar-img-2 {
       z-index: 2;
     }
 
-    .card-proflie-number {
+    .card-avatar-number {
       margin-left: 15px;
       line-height: 26px;
       ${TYPOGRAPHYS.FONT_STYLES.FIRST_LIGHT_XS};

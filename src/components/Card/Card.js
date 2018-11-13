@@ -13,7 +13,6 @@ import {
 class CardHeader extends React.PureComponent {
   static defaultProps = {
     srcImg: require('./images/amsterdam.jpg'),
-    srcProfile: require('./images/profile-1.jpg'),
     srcWishlist: require('./images/favorite_border_white.png')
   }
   
@@ -24,9 +23,10 @@ class CardHeader extends React.PureComponent {
       ui,
       uiFor,
       srcImg,
-      srcProfile,
       srcWishlist,
-      cardTitle
+      cardTitle,
+      allUserNumber,
+      cardAllUserNumber = 157
     } = this.props
 
     // props for css classes
@@ -39,6 +39,8 @@ class CardHeader extends React.PureComponent {
       className
     )
 
+    
+
     return (
       <div className={classes}>
         <div className='cover-ratio-8-7'>
@@ -46,17 +48,13 @@ class CardHeader extends React.PureComponent {
             src={srcImg}
           />
         </div>
-        <div className='card-profile'>
-            <img className='card-profile-img card-profile-img-1' alt='Profile'
-              src={srcProfile}
-            />
-            <img className='card-profile-img card-profile-img-2' alt='Profile'
-              src={srcProfile}
-            />
-            <img className='card-profile-img' alt='Profile'
-              src={srcProfile}
-            />
-          <div className='card-proflie-number'>+157</div>
+        <div class='card-profile'>
+          {children}
+          {allUserNumber && 
+          <div className='card-avatar-number'>
+            <span>+{cardAllUserNumber}</span>
+          </div>
+          }
         </div>
         <div className='card-wishlist'>
           <img className='card-' alt='Profile'
@@ -66,7 +64,6 @@ class CardHeader extends React.PureComponent {
         <div className='card-title'>
           <h2>{cardTitle}</h2>
         </div>
-        {children}
       </div>
     )
   }
@@ -85,7 +82,10 @@ class CardDescription extends React.PureComponent {
       uiFor,
       srcDirection,
       cardSteps,
-      cardDetail
+      cardDetail,
+      cardTime,
+      cardDistance,
+      cardFrom
     } = this.props
 
     // props for css classes
@@ -112,10 +112,45 @@ class CardDescription extends React.PureComponent {
           <p>{cardDetail}</p>
         </div>
         <div class='card-timer'>
-          <div>2h 45min</div>
-          <div>19km</div>
-          <div>from Dam Square</div>
+          <div>{cardTime}</div>
+          <div>{cardDistance}</div>
+          <div>{cardFrom}</div>
         </div>
+        {children}
+      </div>
+    )
+  }
+}
+
+class CardAvatar extends React.PureComponent {
+  static defaultProps = {
+    srcAvatar: require('./images/profile-1.jpg'),
+  }
+  
+  render () {
+    const {
+      className,
+      children,
+      ui,
+      uiFor,
+      srcAvatar,
+    } = this.props
+
+    // props for css classes
+    const uiClasses = ClassNames(ui)
+    const uiForClasses = ClassNames(uiFor)
+    const classes = ClassNames(
+      'card-avatar',
+      { [`is-ui-${uiClasses}`]: uiClasses },
+      { [`is-ui-for-${uiForClasses}`]: uiForClasses },
+      className
+    )
+
+    return (
+      <div className={classes}>
+        <img className='card-avatar-img' alt='Avatar'
+          src={srcAvatar}
+        />
         {children}
       </div>
     )
@@ -155,6 +190,7 @@ export class Card extends React.PureComponent {
 
   static Header = CardHeader
   static Description = CardDescription
+  static Avatar = CardAvatar
 
   render () {
     const {
