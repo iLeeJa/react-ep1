@@ -25,8 +25,7 @@ class CardHeader extends React.PureComponent {
       srcImg,
       srcWishlist,
       cardTitle,
-      allUserNumber,
-      cardAllUserNumber = 157
+      allUserNumber
     } = this.props
 
     // props for css classes
@@ -50,14 +49,14 @@ class CardHeader extends React.PureComponent {
         </div>
         <div class='card-profile'>
           {children}
-          {allUserNumber && 
-          <div className='card-avatar-number'>
-            <span>+{cardAllUserNumber}</span>
-          </div>
+          { allUserNumber && 
+            <div className='card-avatar-number'>
+              <span>+{allUserNumber}</span>
+            </div>
           }
         </div>
         <div className='card-wishlist'>
-          <img className='card-' alt='Profile'
+          <img alt='WishList'
             src={srcWishlist}
           />
         </div>

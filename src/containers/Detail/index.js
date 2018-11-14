@@ -14,7 +14,7 @@ export class DetailContainer extends React.Component {
         <div class='detail'>
           <h1>Detail</h1>
           <Card ui='theme-white'>
-            <Card.Header cardTitle='Amsterdam' allUserNumber>
+            <Card.Header cardTitle='Amsterdam' allUserNumber='157'>
               <Card.Avatar />
               <Card.Avatar />
               <Card.Avatar />
