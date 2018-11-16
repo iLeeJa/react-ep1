@@ -23,9 +23,18 @@ export class DetailContainer extends React.Component {
               srcImg={CONTENTS['amsterdam.jpg']}
               altImg='Amsterdam'
             >
-              <Card.Avatar />
-              <Card.Avatar />
-              <Card.Avatar />
+              <Card.Avatar
+                srcAvatar={CONTENTS['profile-1.jpg']}
+                altAvatar='Avatar 1'
+              />
+              <Card.Avatar
+                srcAvatar={CONTENTS['profile-1.jpg']} 
+                altAvatar='Avatar 2'
+              />
+              <Card.Avatar
+                srcAvatar={CONTENTS['profile-1.jpg']} 
+                altAvatar='Avatar 3'
+              />
             </Card.Header>
             <Card.Description 
               cardSteps='12 steps card' 

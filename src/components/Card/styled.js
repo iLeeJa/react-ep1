@@ -38,6 +38,12 @@ export const CardWrapper = styled.div`
 
     .card-avatar {
       margin-right: -8px;
+
+      .cover-ratio-3-2 {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 150%;
+      }
     }
     
     .card-avatar-img {
@@ -45,6 +51,7 @@ export const CardWrapper = styled.div`
       border: 2px solid ${VARIABLES.COLORS.WHITE};
       width: 26px;
       height: 26px;
+      object-fit: cover;
     }
 
     .card-avatar-img-1 {
@@ -64,7 +71,7 @@ export const CardWrapper = styled.div`
 
   .card-wishlist {
     position: absolute;
-    top: 15px;
+    top: 9px;
     right: 20px;
   }
 
@@ -151,8 +158,6 @@ export const CardWrapper = styled.div`
     background-color: ${VARIABLES.COLORS.BLUE_2};
     height: 143px;
     border-radius: 10px;
-    filter: blur(1px);
-    opacity: 0.8;
   }
 
   &::after {

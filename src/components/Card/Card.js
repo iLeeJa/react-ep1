@@ -55,7 +55,7 @@ class CardHeader extends React.PureComponent {
           }
         </div>
         <div className='card-wishlist'>
-          <img alt='WishList'
+          <img alt='Wishlist'
             src={srcWishlist}
           />
         </div>
@@ -102,7 +102,7 @@ class CardDescription extends React.PureComponent {
           <p>{cardSteps}</p>
         </div>
         <div className='card-direction'>
-          <img className='card-direction-img' alt='Profile'
+          <img className='card-direction-img' alt='Direction'
             src={srcDirection}
           />
         </div>
@@ -121,9 +121,6 @@ class CardDescription extends React.PureComponent {
 }
 
 class CardAvatar extends React.PureComponent {
-  static defaultProps = {
-    srcAvatar: require('./images/profile-1.jpg'),
-  }
   
   render () {
     const {
@@ -132,6 +129,7 @@ class CardAvatar extends React.PureComponent {
       ui,
       uiFor,
       srcAvatar,
+      altAvatar
     } = this.props
 
     // props for css classes
@@ -146,10 +144,12 @@ class CardAvatar extends React.PureComponent {
 
     return (
       <div className={classes}>
-        <img className='card-avatar-img' alt='Avatar'
-          src={srcAvatar}
-        />
-        {children}
+        <div className='cover-ratio-3-2'>
+          <img className='card-avatar-img' alt={altAvatar}
+            src={srcAvatar}
+          />
+          {children}
+        </div>
       </div>
     )
   }
