@@ -12,7 +12,6 @@ import {
 
 class CardHeader extends React.PureComponent {
   static defaultProps = {
-    srcImg: require('./images/amsterdam.jpg'),
     srcWishlist: require('./images/favorite_border_white.png')
   }
   
@@ -23,6 +22,7 @@ class CardHeader extends React.PureComponent {
       ui,
       uiFor,
       srcImg,
+      altImg,
       srcWishlist,
       cardTitle,
       allUserNumber
@@ -38,21 +38,20 @@ class CardHeader extends React.PureComponent {
       className
     )
 
-    
-
     return (
       <div className={classes}>
         <div className='cover-ratio-8-7'>
-          <img className='card-image' alt='Amsterdam'
+          <img className='card-image' alt={altImg}
             src={srcImg}
           />
         </div>
         <div class='card-profile'>
           {children}
-          { allUserNumber && 
-            <div className='card-avatar-number'>
-              <span>+{allUserNumber}</span>
-            </div>
+          { 
+            allUserNumber && 
+              <div className='card-avatar-number'>
+                <span>+{allUserNumber}</span>
+              </div>
           }
         </div>
         <div className='card-wishlist'>

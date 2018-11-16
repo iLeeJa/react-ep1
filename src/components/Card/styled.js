@@ -19,8 +19,8 @@ export const CardWrapper = styled.div`
   ------------------------------- */
   text-align: center;
   border-radius: 10px;
-  margin: 32px auto;
-  width: 311px;
+  margin: 32px;
+  max-width: 311px;
   position: relative;
 
   /* Child element styles
@@ -123,6 +123,7 @@ export const CardWrapper = styled.div`
     line-height: 58px;
     width: 58px;
     height: 58px;
+    box-shadow: 0px 10px 20px rgba(9,151,249,0.4);
 
     .card-direction-img {
       position: relative;

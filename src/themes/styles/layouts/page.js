@@ -44,5 +44,8 @@ injectGlobal`
 
   .detail {
     background-color: #0F224C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
