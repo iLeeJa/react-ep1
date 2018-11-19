@@ -39,18 +39,23 @@ export const CardWrapper = styled.div`
     .card-avatar {
       margin-right: -8px;
 
-      .cover-ratio-3-2 {
+      .cover-ratio-1-1 {
         overflow: hidden;
         position: relative;
-        padding-bottom: 150%;
+        padding-bottom: 100%;
+        width: 26px;
+        height: 26px;
       }
     }
     
     .card-avatar-img {
       border-radius: 50%;
       border: 2px solid ${VARIABLES.COLORS.WHITE};
-      width: 26px;
-      height: 26px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
       object-fit: cover;
     }
 

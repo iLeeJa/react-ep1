@@ -144,7 +144,7 @@ class CardAvatar extends React.PureComponent {
 
     return (
       <div className={classes}>
-        <div className='cover-ratio-3-2'>
+        <div className='cover-ratio-1-1'>
           <img className='card-avatar-img' alt={altAvatar}
             src={srcAvatar}
           />
